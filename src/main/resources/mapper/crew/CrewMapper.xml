@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cleanway.mapper.crew.CrewMapper">
+
+    <!--    (홈) 크루 리스트 조회-->
+    <select id="selectCrewList" parameterType="long" resultType="crewVo">
+        SELECT CC.CREW_NUMBER, CU.USER_NUMBER, CC.CREW_NAME,
+               TO_CHAR(CC.CREW_WRITE_TIME, 'YYYY/MM/DD') AS CREW_WRITE_TIME,
+               CC.CREW_CONTENT, CC.CREW_RECRUITMENT, CR.CREW_ROLE_NUMBER,
+               CU.USER_NICKNAME, CR.CREW_ROLE_NAME,
+               (
+                   SELECT COUNT(*)
+                   FROM CLEAN_MY_CREW
+                   WHERE CREW_NUMBER = CC.CREW_NUMBER
+                     AND CREW_ROLE_NUMBER IN (1, 2)
+               ) AS MEMBER_COUNT
+        FROM
+            CLEAN_CREW CC JOIN CLEAN_USER CU ON CC.USER_NUMBER = CU.USER_NUMBER
+                          JOIN CREW_ROLE CR ON CC.CREW_ROLE_NUMBER = CR.CREW_ROLE_NUMBER
+        ORDER BY CC.CREW_WRITE_TIME DESC
+    </select>
+
+<!--    크루 홈 써치-->
+    <select id="selectCrewByWord" resultType="crewVo">
+        <![CDATA[
+        SELECT DISTINCT CC.CREW_NUMBER, CU.USER_NUMBER, CC.CREW_NAME,
+                        TO_CHAR(CC.CREW_WRITE_TIME, 'YYYY/MM/DD') AS CREW_WRITE_TIME,
+                        CC.CREW_CONTENT, CC.CREW_RECRUITMENT, CR.CREW_ROLE_NUMBER,
+                        CU.USER_NICKNAME, CR.CREW_ROLE_NAME,
+                        (
+                            SELECT COUNT(*)
+                            FROM CLEAN_MY_CREW
+                            WHERE CREW_NUMBER = CC.CREW_NUMBER
+                              AND CREW_ROLE_NUMBER IN (1, 2)
+                        ) AS MEMBER_COUNT
+        FROM CLEAN_CREW CC
+                 JOIN CLEAN_CREW_PROJECT CCP ON CC.CREW_NUMBER= CCP.CREW_NUMBER
+                 JOIN CREW_ROLE CR ON CC.CREW_ROLE_NUMBER = CR.CREW_ROLE_NUMBER
+                 JOIN CLEAN_USER CU ON CC.USER_NUMBER =CU.USER_NUMBER
+        WHERE ( CC.CREW_TAG1 || CC.CREW_TAG2 || CC.CREW_TAG3
+                || CC.CREW_TAG4 || CC.CREW_NAME || CC.CREW_CONTENT)
+           LIKE '%' || #{searchWord} || '%'
+           OR ( CCP.PROJECT_SNAME || CCP.PROJECT_DNAME || CCP.PROJECT_VNAME
+               || CCP.PROJECT_V2NAME || CCP.PROJECT_V3NAME ||CCP.PROJECT_TITLE)
+                LIKE '%' || #{searchWord} || '%'
+        ]]>
+    </select>
+
+<!--    크루 등록-->
+    <insert id="crewInsert" parameterType="cleanCrewDto">
+        <selectKey keyProperty="crewNumber" order="BEFORE" resultType="long">
+            SELECT SEQ_CLEAN_CREW.nextval FROM DUAL
+        </selectKey>
+        INSERT INTO CLEAN_CREW(CREW_NUMBER,USER_NUMBER,CREW_NAME,CREW_WRITE_TIME,CREW_CONTENT,
+                               CREW_RECRUITMENT,CREW_ROLE_NUMBER,CREW_TAG1,CREW_TAG2,CREW_TAG3,CREW_TAG4)
+        VALUES (#{crewNumber},#{userNumber},#{crewName},SYSDATE,
+                #{crewContent},#{crewRecruitment},1,#{crewTag1},#{crewTag2},#{crewTag3},#{crewTag4})
+    </insert>
+
+<!--    크루 모집 디테일 화면 -->
+    <select id="selectCrewDetail" parameterType="long" resultType="crewDetailVo">
+          <![CDATA[
+        SELECT CC.CREW_NUMBER, CU.USER_NUMBER, CC.CREW_NAME, CREW_WRITE_TIME,
+               CREW_CONTENT, CREW_RECRUITMENT, CC.CREW_ROLE_NUMBER, CCP.CREW_PROJECT_NUMBER,
+               PROJECT_DATE, PROJECT_TIME,
+               CCP.PROJECT_SLAT, CCP.PROJECT_SLNG, CCP.PROJECT_SNAME,
+               CCP.PROJECT_VLAT, CCP.PROJECT_VLNG, CCP.PROJECT_VNAME,
+               CCP.PROJECT_DLAT, CCP.PROJECT_DLNG, CCP.PROJECT_DNAME,
+               CU.USER_NICKNAME, (
+                   SELECT COUNT(*)
+                   FROM CLEAN_MY_CREW
+                   WHERE CREW_NUMBER = CC.CREW_NUMBER
+                     AND CREW_ROLE_NUMBER IN (1, 2)
+               ) AS MEMBER_COUNT
+        FROM CLEAN_CREW CC
+                 JOIN CLEAN_USER CU ON CC.USER_NUMBER = CU.USER_NUMBER
+                 JOIN CLEAN_CREW_PROJECT CCP ON CC.CREW_NUMBER = CCP.CREW_NUMBER
+        WHERE CC.CREW_NUMBER = #{crewNumber}
+          AND CC.CREW_ROLE_NUMBER = 1
+          AND   ROWNUM = 1
+        ORDER BY CCP.PROJECT_WRITE_TIME ASC
+
+        ]]>
+    </select>
+
+<!--    크루 첫 번째 프로젝트 번호 조회하기-->
+    <select id="getCrewProjectNumber" resultType="Long">
+        SELECT CREW_PROJECT_NUMBER
+        FROM CLEAN_CREW_PROJECT CCP
+                 JOIN CLEAN_CREW CC ON CCP.CREW_NUMBER = CC.CREW_NUMBER
+        WHERE CC.CREW_NUMBER = #{crewNumber}
+          AND CCP.PROJECT_TITLE = #{crewName} || '의 첫 번째 크루 프로젝트에 참여해보세요!'
+    </select>
+
+    <!--크루 참여-->
+    <insert id="crewJoinInsert" parameterType="cleanMyCrewDto">
+        INSERT INTO CLEAN_MY_CREW(CREW_NUMBER, USER_NUMBER, CREW_ROLE_NUMBER,CREW_JOIN_DATE)
+        VALUES (#{crewNumber},#{userNumber},#{crewRoleNumber},sysdate)
+    </insert>
+
+    <!--    특정 회원이 특정 크루에 참여했는지 검사 조회-->
+    <select id="selectMyCrewJoinCount" parameterType="cleanMyCrewDto" resultType="int">
+        select COUNT(CREW_NUMBER)
+        from CLEAN_MY_CREW
+        where CREW_NUMBER=#{crewNumber} and USER_NUMBER=#{userNumber}
+    </select>
+
+<!--    내 크루 단건 조회-->
+    <select id="selectMyCrewJoin" parameterType="cleanMyCrewDto" resultType="long">
+        select crew_number,user_number,crew_role_number,crew_join_date
+        from CLEAN_MY_CREW
+        where CREW_NUMBER=#{crewNumber} and USER_NUMBER=#{userNumber}
+    </select>
+
+    <!--    내 크루 목록 조회-->
+    <select id="selectMyCrewList" parameterType="long" resultType="myCrewVo">
+        select CU.USER_NUMBER, CC.CREW_NUMBER, CMC.CREW_ROLE_NUMBER,
+               TO_CHAR(CMC.CREW_JOIN_DATE, 'YYYY/MM/DD') AS CREW_JOIN_DATE,
+               CU.USER_NICKNAME,CC.CREW_NAME,CC.CREW_RECRUITMENT,(
+                   SELECT COUNT(*)
+                   FROM CLEAN_MY_CREW
+                   WHERE CREW_NUMBER = CC.CREW_NUMBER
+                     AND CREW_ROLE_NUMBER IN (1, 2)
+               ) AS MEMBER_COUNT
+        from CLEAN_MY_CREW CMC join CLEAN_USER CU on CMC.USER_NUMBER = CU.USER_NUMBER
+                               JOIN CLEAN_CREW CC on CMC.CREW_NUMBER = CC.CREW_NUMBER
+        WHERE CU.USER_NUMBER=#{userNumber}
+        ORDER BY CMC.CREW_JOIN_DATE DESC
+    </select>
+
+<!--    내 크루 검색어 써치-->
+    <select id="selectMyCrewByWord" resultType="myCrewVo">
+         <![CDATA[
+        SELECT DISTINCT
+            CU.USER_NUMBER,
+            CC.CREW_NUMBER,
+            CMC.CREW_ROLE_NUMBER,
+            TO_CHAR(CMC.CREW_JOIN_DATE, 'YYYY/MM/DD') AS CREW_JOIN_DATE,
+            CU.USER_NICKNAME,
+            CC.CREW_NAME,
+            CC.CREW_RECRUITMENT,
+            (
+                SELECT COUNT(*)
+                FROM CLEAN_MY_CREW
+                WHERE CREW_NUMBER = CC.CREW_NUMBER
+                  AND CREW_ROLE_NUMBER IN (1, 2)
+            ) AS MEMBER_COUNT
+        FROM CLEAN_MY_CREW CMC
+                JOIN CLEAN_USER CU ON CMC.USER_NUMBER = CU.USER_NUMBER
+                JOIN CLEAN_CREW CC ON CMC.CREW_NUMBER = CC.CREW_NUMBER
+                JOIN CLEAN_CREW_PROJECT CCP ON CMC.CREW_NUMBER = CCP.CREW_NUMBER
+        WHERE CU.USER_NUMBER = #{userNumber}
+          AND (
+                    (CC.CREW_TAG1 || CC.CREW_TAG2 || CC.CREW_TAG3 ||
+                     CC.CREW_TAG4 || CC.CREW_NAME || CC.CREW_CONTENT) LIKE '%' || #{searchWord} || '%'
+                OR (CCP.PROJECT_SNAME || CCP.PROJECT_DNAME || CCP.PROJECT_VNAME ||
+                    CCP.PROJECT_V2NAME || CCP.PROJECT_V3NAME || CCP.PROJECT_TITLE) LIKE '%' || #{searchWord} || '%'
+            )
+        ]]>
+    </select>
+
+    <!--    크루 참여 인원 알아보기-->
+    <select id="countCrewMembers" resultType="_int">
+        SELECT COUNT(*)
+        FROM CLEAN_MY_CREW
+        WHERE CREW_NUMBER = #{crewNumber}
+          AND CREW_ROLE_NUMBER IN (1, 2)
+    </select>
+
+    <!--크루 탈퇴-->
+    <delete id="crewDelete" parameterType="cleanMyCrewDto">
+        DELETE FROM CLEAN_MY_CREW
+        WHERE CREW_NUMBER = #{crewNumber} AND USER_NUMBER = #{userNumber}
+    </delete>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+

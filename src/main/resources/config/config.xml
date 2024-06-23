@@ -4,11 +4,52 @@
 <configuration>
     <typeAliases>
       <typeAlias type="com.example.cleanway.domain.dto.report.CleanReportDto" alias="cleanReportDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.report.ReportImgDto" alias="reportImgDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.report.ReportSpotDto" alias="reportSpotDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.report.CleanSpotDto" alias="cleanSpotDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.report.ReportKeywordDto" alias="reportKeywordDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.report.ReportRequestDto" alias="reportRequestDto"/>
+
+
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CleanCrewDto" alias="cleanCrewDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CleanCrewProjectDto" alias="cleanCrewProjectDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CrewRecommendDto" alias="crewRecommendDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CrewProjectRoleDto" alias="crewProjectRoleDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CrewRoleDto" alias="crewRoleDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CleanMyCrewDto" alias="cleanMyCrewDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CrewRequestDto" alias="crewRequestDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CleanMyProjectDto" alias="cleanMyProjectDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.CrewProjectRouteDto" alias="crewProjectRouteDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.crew.ProjectRequestDto" alias="projectRequestDto"/>
+
+
+      <typeAlias type="com.example.cleanway.domain.dto.route.CleanCourseDto" alias="cleanCourseDto"/>
+      <typeAlias type="com.example.cleanway.domain.dto.route.CleanRouteDto" alias="cleanRouteDto"/>
+
+
       <typeAlias type="com.example.cleanway.domain.dto.user.UserDto" alias="userDto"/>
-        <typeAlias type="com.example.cleanway.domain.dto.report.ReportImgDto" alias="reportImgDto"/>
-
-
+      <typeAlias type="com.example.cleanway.domain.dto.user.AuthTokens" alias="authTokens"/>
 
       <typeAlias type="com.example.cleanway.domain.vo.report.ReportVo" alias="reportVo"/>
+
+      <typeAlias type="com.example.cleanway.domain.vo.mypage.MySpotVo" alias="mySpotVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.mypage.MyRouteVo" alias="myRouteVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.mypage.MyInfoVo" alias="myInfoVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.mypage.MyProjectVo" alias="myProjectVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.mypage.MyPloggingVo" alias="myPloggingVo"/>
+
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewVo" alias="crewVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewTeamVo" alias="crewTeamVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewProjectVo" alias="CrewProjectVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.MyCrewVo" alias="myCrewVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewDetailVo" alias="crewDetailVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewMemberVo" alias="crewMemberVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.ProjectMemberVo" alias="projectMemberVo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewTop3Vo" alias="crewTop3Vo"/>
+      <typeAlias type="com.example.cleanway.domain.vo.crew.CrewRoomDetailVo" alias="crewRoomDetailVo"/>
+
+
+      <typeAlias type="com.example.cleanway.domain.response.CrewSearchResponse" alias="crewSearchResponse"/>
+      <typeAlias type="com.example.cleanway.domain.response.kakao.KakaoInfo" alias="kakaoInfo"/>
     </typeAliases>
 </configuration>

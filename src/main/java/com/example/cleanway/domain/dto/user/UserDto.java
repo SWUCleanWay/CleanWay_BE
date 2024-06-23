@@ -9,4 +9,5 @@ public class UserDto {
     private Long userNumber;
     private String userEmail;
     private String userNickname;
+    private String profileImagePath;
 }

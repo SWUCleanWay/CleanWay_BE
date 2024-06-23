@@ -8,9 +8,8 @@ import lombok.NoArgsConstructor;
 public class CleanRouteDto {
     private Long routeNumber;
     private Long userNumber;
-    private Long courseNumber;
     private String routeName;
-    private Double routeSlat;
+    private Double routeSLat;
     private Double routeSLng;
     private String routeSName;
     private Double routeDLat;
