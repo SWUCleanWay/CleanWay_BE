@@ -29,16 +29,15 @@
 ### 📰 API 명세서 [Notion 이동하기](https://solstice-dime-c63.notion.site/API-86aba002e3b54310b80596d8fe827bc7?pvs=4)
 
   
-### 🛒 제보 [상세보기 - WIKI페이지](https://github.com/jeongeungyeong/jumak/wiki/%F0%9F%9B%92-%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88)
+### 🛒 제보 
 + 제보목록
 
-### 👨‍👩‍👧‍👦 크루 모집 [상세보기- WIKI페이지](https://github.com/jeongeungyeong/jumak/wiki/%F0%9F%A5%83-%EC%A3%BC%EB%AA%A8's-store)
+### 👨‍👩‍👧‍👦 크루 모집 
 + 크루 모집 리스트 조회
 
-### 👨‍👩‍👧‍👦 크루방 [상세보기- WIKI페이지](https://github.com/jeongeungyeong/jumak/wiki/%F0%9F%A5%83-%EC%A3%BC%EB%AA%A8's-store)
-+ 카테고리별 우리술 조회
+### 👨‍👩‍👧‍👦 크루방
 + 크루 프로젝트
 
-### 💳 마이페이지 [상세보기- WIKI페이지](https://github.com/jeongeungyeong/jumak/wiki/%F0%9F%92%B3-%EA%B2%B0%EC%A0%9C%ED%8E%98%EC%9D%B4%EC%A7%80)
-+ 회원정보 및 상품 정보 리스트 조회
+### 💳 마이페이지 
++ 회원 정보 리스트 조회
 
