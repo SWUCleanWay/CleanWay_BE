@@ -37,7 +37,8 @@
 ### 📝 제보 글쓰기 
 |문제사진 업로드|제보 장소 업로드|문제상황 선택|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/2c0be3e1-ac45-4340-986a-4856651c8bf5" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/6f2351fa-4f6e-4565-871c-c2c65f55af5e" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/5149059d-282d-4c1c-9d19-1de21a4825a0" width="300">|
+
 
 ### 👨‍👩‍👧‍👦 크루 모집 
 |크루 모집 글 목록|제보 장소 업로드|문제상황 선택|
