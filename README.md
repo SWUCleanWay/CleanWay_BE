@@ -20,14 +20,18 @@
 
 ## 🌏🏃‍♂️ 클린웨이 포트폴리오(PDF)
 [최종_클린웨이.pdf](https://github.com/user-attachments/files/15942663/_.pdf)
+<br/>
 
-
-# 🚶‍♀️🌍🚶‍♂️주요 기능
-###  ERD 설계도 
+### 📂 API 명세서 [Notion 이동하기](https://solstice-dime-c63.notion.site/API-86aba002e3b54310b80596d8fe827bc7?pvs=4)
+### 📋 ERD 설계도 
 <img width="1188" alt="erd" src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/9f77ae9b-5a91-43b2-ad3d-d2235ec16e40">
 
-### 📰 API 명세서 [Notion 이동하기](https://solstice-dime-c63.notion.site/API-86aba002e3b54310b80596d8fe827bc7?pvs=4)
 
+
+<br/>
+<br/>
+
+# 🚶‍♀️🌍🚶‍♂️주요 기능
 
 ### 📍 제보 목록
 |제보 글 목록 보기|제보 장소 저장하기|저장한 장소 보기|
