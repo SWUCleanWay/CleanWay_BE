@@ -32,34 +32,29 @@
 ### 📍 제보
 |제보 글 목록 보기|제보 장소 저장하기|저장한 장소 보기|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/250cfc8c-72ff-4fb6-8450-5b1243959871" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
 
 ### 📝 제보 글쓰기 
 |문제사진 업로드|제보 장소 업로드|문제상황 선택|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/2c0be3e1-ac45-4340-986a-4856651c8bf5" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/6f2351fa-4f6e-4565-871c-c2c65f55af5e" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/5149059d-282d-4c1c-9d19-1de21a4825a0" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ad4b9697-0379-4834-b7d3-3782fd9cbddf" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/0c304b14-fedf-4d82-9c76-38cc4820ddd2" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ac9e5d04-abbe-4ba2-bb9f-ee8ea1e3edcb" width="300">|
 
 
 ### 👨‍👩‍👧‍👦 크루 모집 
-|크루 모집 글 목록|제보 장소 업로드|문제상황 선택|
+|크루 모집 글|크루 둘러보기|크루 참여하기|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ed7bdcd7-5f6c-4dee-bbde-3cbb00afb481" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/63639b64-7e12-4932-8893-cf648eb3a740" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/78e0f32a-3879-47f0-bfd4-72849848a6eb" width="300">|
 
-### 👨‍👩‍👧‍👦 크루 모집 
-|크루 모집 글 목록|제보 장소 업로드|문제상황 선택|
+### 👨‍👩‍👧‍👦 크루방 
+|크루 프로젝트 보기|지난 프로젝트|문제상황 선택|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/acba5cc0-a400-4672-b9f9-9c31c11546ce" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/1c4ff9a5-d575-4a5e-b3a5-59ec944869a9" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
 
-
-### 👨‍👩‍👧‍👦 크루방 둘러보기 
-|크루 모집 글 목록|제보 장소 업로드|문제상황 선택|
+### 🤸‍♀️ 내 크루  
+|크루 검색 기능|제보 장소 업로드|문제상황 선택|
 |:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
+|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/3eb38dbf-949f-46fb-9d7f-63d8452413f2" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
 
-### 👨‍👩‍👧‍👦 크루 프로젝트 
-|크루 모집 글 목록|제보 장소 업로드|문제상황 선택|
-|:---:|:---:|:---:|
-|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/30e9bab9-dfed-4b24-b990-fb7445b4ee64" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/ceabb041-2ea0-41a3-a32c-e41b9cf827f6" width="300">|<img src="https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/35f7950d-708c-466d-9e01-98e42e786d27" width="300">|
 
 
 ### 🍀 마이페이지 [상세보기](https://github.com/jeongeungyeong/CleanWay_BE/wiki/%F0%9F%8D%80-My-page)
