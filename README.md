@@ -19,7 +19,8 @@
 ![슬라이드15](https://github.com/SWUCleanWay/CleanWay_BE/assets/150095257/4e2ffdbe-3aa9-4ac9-b816-3b4b815b7fdb)
 
 ## 🌏🏃‍♂️ 클린웨이 포트폴리오(PDF)
-[최종_클린웨이.pdf](https://github.com/user-attachments/files/15942663/_.pdf)
+[포트폴리오_클린웨이_안드로이드앱.pdf](https://github.com/user-attachments/files/16061825/_._.pdf)
+
 <br/>
 
 ### 📂 API 명세서 [Notion 이동하기](https://solstice-dime-c63.notion.site/API-86aba002e3b54310b80596d8fe827bc7?pvs=4)
